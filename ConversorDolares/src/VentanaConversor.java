@@ -16,15 +16,14 @@ public class VentanaConversor extends JFrame {
 	private JPanel contentPane;
 	private JTextField cajaEuros;
 	private JTextField cajaDolares;
+	//se crea una variable del tipo float para que desaparezca el error de la constante en jdk 1.7
+	private float valorPaso;
 	 
-	/*
-       constructor Ventana Conversor al constructor se le pasa una constante no una variable ya que causa
-       un error el eclipse, este error se elimina si se ejecutan las librerias jdk 1.8, entonces si que se puede pasar
-       una variable de tipo float
-       */
 	
-	public VentanaConversor( final float valorConversion) {
-		
+	
+	public VentanaConversor( float valorConversion) {
+		//a la variable anterior creada se le pasa valorConversion
+		valorPaso=valorConversion;
 		setTitle("Ventana Conversi\u00F3n Dolares");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,8 +57,9 @@ public class VentanaConversor extends JFrame {
 			   //se crea la variable euros y se guarda el contenido de la caja euros
 			   float euros;
 			   euros=Float.parseFloat(cajaEuros.getText());
-			   //en la caja dolares se muestra el resultado de multiplicar los euros por el valor de conversion
-			   cajaDolares.setText(String.valueOf(euros*valorConversion));
+			   //en la caja dolares se muestra el resultado de multiplicar los euros por el valor de conversion 
+			   //en este caso sera valorPaso para que no de error y tengamos que poner un a constante
+			   cajaDolares.setText(String.valueOf(euros*valorPaso));
 			
 				
 			}
