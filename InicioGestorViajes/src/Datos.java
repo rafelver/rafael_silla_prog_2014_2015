@@ -20,11 +20,12 @@ public class Datos {
 		
 		}
 	
-	//se crea 
+	//se crea el metodo que devuelve la array de los nombres
 	public String[] getNombreDivisa(){
 		return this.nombreDivisa;
 	}
 	
+	//se crea el metodo que devolvera la array de los valores de las monedas
 	public float[] getValorDivisa(){
 		return this.valorDivisa;
 	}
