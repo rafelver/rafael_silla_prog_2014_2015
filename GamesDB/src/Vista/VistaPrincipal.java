@@ -25,7 +25,7 @@ public class VistaPrincipal extends JPanel {
 				//creamos las etiquetas
 				lblAvatar = new JLabel("Avatar");
 				lblAvatar.setBounds(10, 11, 171, 132);
-				lblAvatar.setIcon(null);
+				lblAvatar.setIcon(new ImageIcon("C:\\Users\\RAFAEL\\Desktop\\florida 2014\\programacion\\git2\\GamesDB\\src\\Imagenes\\avatar.jpg"));
 				add(lblAvatar);
 				
 				lblUsuario = new JLabel("Usuario");
